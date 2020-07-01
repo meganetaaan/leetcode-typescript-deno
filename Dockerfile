@@ -7,7 +7,7 @@
 # https://github.com/microsoft/vscode-dev-containers/tree/v0.122.1/containers/typescript-node-14/.devcontainer/Dockerfile
 FROM hayd/ubuntu-deno
 
-RUN apt-get update && apt-get install -y bash git \
+RUN apt-get update && apt-get install -y bash git nodejs\
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
