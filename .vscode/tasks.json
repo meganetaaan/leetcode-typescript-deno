@@ -6,7 +6,12 @@
         {
             "label": "test",
             "type": "shell",
-            "command": "deno test src"
+            "command": "deno test ${file}",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
         }
     ]
 }
