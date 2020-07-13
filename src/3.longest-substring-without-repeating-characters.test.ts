@@ -2,7 +2,7 @@ import {
   assertEquals,
   assertThrows,
   assert,
-} from "https://deno.land/std/testing/asserts.ts";
+} from "https://deno.land/std@0.60.0/testing/asserts.ts";
 import { addTwoNumbers } from "./2.add-two-numbers.ts";
 import { lengthOfLongestSubstring } from "./3.longest-substring-without-repeating-characters.ts";
 
