@@ -1,9 +1,9 @@
-import { ListNode } from "../lib/list-node.ts";
 /*
  * @lc app=leetcode id=2 lang=typescript
  *
  * [2] Add Two Numbers
  */
+import { ListNode } from "../lib/list-node.ts";
 
 // @lc code=start
 function addTwoNumbers(
