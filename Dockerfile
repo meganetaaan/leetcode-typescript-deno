@@ -5,7 +5,7 @@
 
 # To fully customize the contents of this image, use the following Dockerfile instead:
 # https://github.com/microsoft/vscode-dev-containers/tree/v0.122.1/containers/typescript-node-14/.devcontainer/Dockerfile
-FROM hayd/ubuntu-deno
+FROM hayd/ubuntu-deno:1.1.3
 
 RUN apt-get update && apt-get install -y bash git nodejs\
     && apt-get clean \
