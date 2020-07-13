@@ -19,7 +19,6 @@ function lengthOfLongestSubstring(s: string): number {
     if (hash.has(c)) {
       max = Math.max(max, right - left);
       left = Math.max(hash.get(c) + 1, left)
-      console.log('left updated: ', left)
     }
     hash.set(c, right);
     right++;
