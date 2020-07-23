@@ -6,13 +6,17 @@
 
 // @lc code=start
 function maxArea(height: number[]): number {
-  let max = 0;
-  for (let i = 0, len = height.length; i < len - 1; i++) {
-    for (let j = i + 1; j < len; j++) {
-      max = Math.max(max, (j - i) * Math.min(height[i], height[j]));
+  let i = 0, j = height.length - 1;
+  let water = 0;
+  while (i < j) {
+    water = Math.max(water, (j - i) * Math.min(height[i], height[j]));
+    if (height[i] < height[j]) {
+      i++;
+    } else {
+      j--;
     }
   }
-  return max;
+  return water;
 }
 
 // @lc code=end
