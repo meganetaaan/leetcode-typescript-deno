@@ -6,10 +6,10 @@
 
 // @lc code=start
 function addBinary(a: string, b: string): string {
-  const aNum = BigInt("0b" + a)
-  const bNum = BigInt("0b" + b)
+  const aNum = BigInt("0b" + a);
+  const bNum = BigInt("0b" + b);
   return (aNum + bNum).toString(2);
-}// end
+} // end
 // @lc code=end
 
 export { addBinary };
