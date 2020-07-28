@@ -21,14 +21,23 @@ import { TreeNode } from "../lib/tree-node.ts";
  * }
  */
 function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
-  if (p == null && q == null) {
-    return true;
-  } else if (p == null || q == null) {
-    return false;
-  } else if (p.val !== q.val) {
-    return false;
+  const queue: (TreeNode | null)[] = []
+  queue.push(p)
+  queue.push(q)
+  while (queue.length > 0) {
+    p = queue.shift() as (TreeNode | null);
+    q = queue.shift() as (TreeNode | null);
+    if (p == null && q == null) {
+      continue;
+    } else if (p == null || q == null) {
+      return false;
+    } else if (p.val !== q.val) {
+      return false
+    }
+    queue.push(p.left, q.left)
+    queue.push(p.right, q.right)
   }
-  return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+  return true;
 }
 
 //end
