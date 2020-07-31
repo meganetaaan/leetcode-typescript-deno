@@ -13,7 +13,7 @@ const testDatas: TestData<typeof target>[] = [
 
 testDatas.forEach((t, i) => {
   Deno.test({
-    name: `${String(i)}: "${t}"`,
+    name: `${String(i)}: "${t.args}"`,
     fn(): void {
       assertEquals(target(...t.args), t.expected);
     },
